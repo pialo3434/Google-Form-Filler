@@ -1,0 +1,5 @@
+Timestamp: The date and time when the form was submitted
+Form URL: The URL of the form that was filled out
+Questions: The list of questions that were present in the form
+Selected Options: The options that were selected for each question in the form
+Status: Whether the form was submitted successfully or not. If the form submission failed, the reason for the failure.

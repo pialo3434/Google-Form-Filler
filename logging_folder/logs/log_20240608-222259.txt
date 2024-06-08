@@ -1,0 +1,618 @@
+2024-06-08 22:23:01,528 - Question: Expressa de forma clara aquilo que pretende realmente dizer
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:01,595 - Question: Mostra coerência entre as suas acções e aquilo em que acredita
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:01,941 - Question: Pede ideias que possam pôr em causa as suas próprias convicções
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,008 - Question: Sabe, de forma precisa, como os outros vêem as capacidades que ele tem
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,071 - Question: Toma decisões com base nas suas próprias convicções
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,136 - Question: Antes de tomar uma decisão presta atenção a perspectivas diferentes
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,206 - Question: Mostra que tem consciência das suas próprias forças e fraquezas
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,278 - Question: Partilha abertamente informação com outros
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,346 - Question: Resiste a pressões para fazer coisas que são contrárias às suas convicções?
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,413 - Question: Antes de tomar uma decisão analisa, de maneira rigorosa, dados relevantes
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,478 - Question: Tem clara consciência do seu impacto sobre os outros
+*
+Discordo totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,548 - Question: Expressa claramente as suas ideias e pensamentos
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,627 - Question: Orienta as suas acções de acordo com os seus padrões morais
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:02,697 - Question: Encoraja os outros a expressarem pontos de vista diferentes dos seus
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:03,266 - Question: Sexo
+*
+Masculino
+Feminino, Selected Option: 
+2024-06-08 22:23:03,324 - Question: Nacionalidade
+*
+Portuguesa
+Brasileira
+Americana, Selected Option: 
+2024-06-08 22:23:03,395 - Question: Idade
+*
+18-35
+35-50
+50-65
+65+, Selected Option: 
+2024-06-08 22:23:03,479 - Question: Escolaridade
+*
+Sem escolaridade
+Básico (até 11º completo)
+Secundário (12º completo)
+Ensino Superior completo, Selected Option: 
+2024-06-08 22:23:03,718 - Question: Nas últimas eleições legislativas, em que partido votou?
+*
+PS
+AD- PSD+CDS
+PAN
+Iniciativa Liberal
+CDU
+Bloco Esquerda
+Chega
+Nenhum destes, Selected Option: 
+2024-06-08 22:23:04,277 - Question: Expressa de forma clara aquilo que pretende realmente dizer
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:04,552 - Question: Mostra coerência entre as suas acções e aquilo em que acredita
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:04,661 - Question: Pede ideias que possam pôr em causa as suas próprias convicções
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:04,736 - Question: Sabe, de forma precisa, como os outros vêem as capacidades que ele tem
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:04,813 - Question: Toma decisões com base nas suas próprias convicções
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:04,890 - Question: Antes de tomar uma decisão presta atenção a perspectivas diferentes
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:04,964 - Question: Mostra que tem consciência das suas próprias forças e fraquezas
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:05,037 - Question: Partilha abertamente informação com outros
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:05,110 - Question: Resiste a pressões para fazer coisas que são contrárias às suas convicções?
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:05,175 - Question: Antes de tomar uma decisão analisa, de maneira rigorosa, dados relevantes
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:05,241 - Question: Tem clara consciência do seu impacto sobre os outros
+*
+Discordo totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:05,318 - Question: Expressa claramente as suas ideias e pensamentos
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:05,382 - Question: Orienta as suas acções de acordo com os seus padrões morais
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:05,444 - Question: Encoraja os outros a expressarem pontos de vista diferentes dos seus
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:05,927 - Question: Sexo
+*
+Masculino
+Feminino, Selected Option: 
+2024-06-08 22:23:05,983 - Question: Nacionalidade
+*
+Portuguesa
+Brasileira
+Americana, Selected Option: 
+2024-06-08 22:23:06,235 - Question: Idade
+*
+18-35
+35-50
+50-65
+65+, Selected Option: 
+2024-06-08 22:23:06,298 - Question: Escolaridade
+*
+Sem escolaridade
+Básico (até 11º completo)
+Secundário (12º completo)
+Ensino Superior completo, Selected Option: 
+2024-06-08 22:23:06,372 - Question: Nas últimas eleições legislativas, em que partido votou?
+*
+PS
+AD- PSD+CDS
+PAN
+Iniciativa Liberal
+CDU
+Bloco Esquerda
+Chega
+Nenhum destes, Selected Option: 
+2024-06-08 22:23:06,896 - Question: Expressa de forma clara aquilo que pretende realmente dizer
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,173 - Question: Mostra coerência entre as suas acções e aquilo em que acredita
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,268 - Question: Pede ideias que possam pôr em causa as suas próprias convicções
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,339 - Question: Sabe, de forma precisa, como os outros vêem as capacidades que ele tem
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,408 - Question: Toma decisões com base nas suas próprias convicções
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,473 - Question: Antes de tomar uma decisão presta atenção a perspectivas diferentes
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,540 - Question: Mostra que tem consciência das suas próprias forças e fraquezas
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,611 - Question: Partilha abertamente informação com outros
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,679 - Question: Resiste a pressões para fazer coisas que são contrárias às suas convicções?
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,746 - Question: Antes de tomar uma decisão analisa, de maneira rigorosa, dados relevantes
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,813 - Question: Tem clara consciência do seu impacto sobre os outros
+*
+Discordo totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,889 - Question: Expressa claramente as suas ideias e pensamentos
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:07,956 - Question: Orienta as suas acções de acordo com os seus padrões morais
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:08,019 - Question: Encoraja os outros a expressarem pontos de vista diferentes dos seus
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:08,494 - Question: Sexo
+*
+Masculino
+Feminino, Selected Option: 
+2024-06-08 22:23:08,557 - Question: Nacionalidade
+*
+Portuguesa
+Brasileira
+Americana, Selected Option: 
+2024-06-08 22:23:08,838 - Question: Idade
+*
+18-35
+35-50
+50-65
+65+, Selected Option: 
+2024-06-08 22:23:08,898 - Question: Escolaridade
+*
+Sem escolaridade
+Básico (até 11º completo)
+Secundário (12º completo)
+Ensino Superior completo, Selected Option: 
+2024-06-08 22:23:08,960 - Question: Nas últimas eleições legislativas, em que partido votou?
+*
+PS
+AD- PSD+CDS
+PAN
+Iniciativa Liberal
+CDU
+Bloco Esquerda
+Chega
+Nenhum destes, Selected Option: 
+2024-06-08 22:23:09,519 - Question: Expressa de forma clara aquilo que pretende realmente dizer
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:09,604 - Question: Mostra coerência entre as suas acções e aquilo em que acredita
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:09,913 - Question: Pede ideias que possam pôr em causa as suas próprias convicções
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:09,976 - Question: Sabe, de forma precisa, como os outros vêem as capacidades que ele tem
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:10,039 - Question: Toma decisões com base nas suas próprias convicções
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:10,116 - Question: Antes de tomar uma decisão presta atenção a perspectivas diferentes
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:10,176 - Question: Mostra que tem consciência das suas próprias forças e fraquezas
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:10,244 - Question: Partilha abertamente informação com outros
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:10,312 - Question: Resiste a pressões para fazer coisas que são contrárias às suas convicções?
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:10,389 - Question: Antes de tomar uma decisão analisa, de maneira rigorosa, dados relevantes
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:10,477 - Question: Tem clara consciência do seu impacto sobre os outros
+*
+Discordo totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:10,548 - Question: Expressa claramente as suas ideias e pensamentos
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:10,619 - Question: Orienta as suas acções de acordo com os seus padrões morais
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:10,684 - Question: Encoraja os outros a expressarem pontos de vista diferentes dos seus
+*
+Discordo Totalmente
+1
+2
+3
+4
+5
+Concordo Totalmente, Selected Option: 
+2024-06-08 22:23:11,185 - Question: Sexo
+*
+Masculino
+Feminino, Selected Option: 
+2024-06-08 22:23:11,262 - Question: Nacionalidade
+*
+Portuguesa
+Brasileira
+Americana, Selected Option: 
+2024-06-08 22:23:11,527 - Question: Idade
+*
+18-35
+35-50
+50-65
+65+, Selected Option: 
+2024-06-08 22:23:11,594 - Question: Escolaridade
+*
+Sem escolaridade
+Básico (até 11º completo)
+Secundário (12º completo)
+Ensino Superior completo, Selected Option: 

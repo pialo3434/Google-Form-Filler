@@ -1,0 +1,20 @@
+2024-06-06 01:45:08,809 - Question: No teu ponto de vista, achas que todas as empresas envolvidas na cadeia de abastecimento alimentar seguem os protocolos de segurança necessários para a higienenização dos alimentos?
+*
+Sim
+Não
+Raramente, Selected Option: Raramente
+2024-06-06 01:45:08,882 - Question: Qual a percentagem da comida pensas que é desperdiçada em Portugal antes de chegar ao consumidor?
+*
+10%-20%
+40%-50%
++60%, Selected Option: +60%
+2024-06-06 01:45:08,974 - Question: Sabes distinguir reducação alimentar e dieta?
+*
+Sei
+Não sei, Selected Option: Sei
+2024-06-06 01:45:09,248 - Question: Quantas pessoas na tua cidade achas que praticam agricultura auto-sustentavel?
+*
+10
+25
+40, Selected Option: 40
+2024-06-06 01:45:09,728 - Question: Form submitted successfully.
