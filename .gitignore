@@ -1,0 +1,8 @@
+# Ignore the logs folder in logging_folder at the root level
+/logging_folder/logs/
+
+# Ignore the logs folder in logging_folder in any subdirectory
+**/logging_folder/logs/
+
+# Ignore any logs folder inside any logging_folder
+**/logging_folder/**/logs/
