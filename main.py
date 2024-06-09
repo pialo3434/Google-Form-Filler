@@ -4,6 +4,8 @@ from lib.logger_setup import setup_logger
 import time
 
 def main():
+    valid_parties = ['PS', 'BLOCO', 'PAN', 'PCP-PEV']
+    valid_nationalities = ['PORTUGUESA', 'BRASILEIRA', 'AMERICANA', 'UCRANIANA', 'RUSSA', 'ANGOLANA', 'MOÇAMBICANA', 'CABO VERDIANA', 'OUTRO']
     while True:
         print("\n1. Start")
         print("2. Credits")
@@ -12,25 +14,36 @@ def main():
 
         if choice == '1':
             pattern = input("Enter the pattern (A, B, C): ").upper()
-            if pattern == 'A':
-                times = int(input("How many times do you want to run pattern A? "))
+            if pattern in ['A', 'B', 'C']:
+                times = int(input(f"How many times do you want to run pattern {pattern}? "))
                 delay = int(input("Enter the delay in seconds between each run: "))
+                nationality = None
+                if pattern in ['B', 'C']:
+                    nationality = input("Enter your nationality from the list: Portuguesa, Brasileira, Americana, Ucraniana, Russa, Angolana, Moçambicana, Cabo Verdiana, Outro: ").upper()
+                    while nationality not in valid_nationalities:
+                        print("Invalid nationality. Please choose from the following list: Portuguesa, Brasileira, Americana, Ucraniana, Russa, Angolana, Moçambicana, Cabo Verdiana, Outro")
+                        nationality = input("Enter your nationality: ").upper()
+                    if pattern == 'B':
+                        party = input("Enter the party you want to vote for (PS, BLOCO, PAN, PCP-PEV): ").upper()
+                        while party not in valid_parties:
+                            print("Invalid party. Please choose from the following list: PS, BLOCO, PAN, PCP-PEV")
+                            party = input("Enter the party you want to vote for: ").upper()
                 for i in range(times):
-                    print(f"Running pattern A: {i+1}/{times}")
+                    print(f"Running pattern {pattern}: {i+1}/{times}")
                     config = load_config()
                     logger = setup_logger()
                     form_filler = FormFiller(config, logger)
-                    form_filler.fill_form(pattern)
+                    if pattern in ['B', 'C']:
+                        form_filler.fill_form(pattern, party, nationality)  # Pass the party and nationality to the fill_form method
+                    else:
+                        form_filler.fill_form(pattern)
                     form_filler.driver.quit()  # Ensure the driver is quit after each run
                     if i < times - 1:  # No need to wait after the last form is filled
                         print(f"Waiting for {delay} seconds before the next run...")
                         time.sleep(delay)
-                print("Completed all runs.")
+                print(f"Completed all runs for pattern {pattern}.")
             else:
-                config = load_config()
-                logger = setup_logger()
-                form_filler = FormFiller(config, logger)
-                form_filler.fill_form(pattern)
+                print("Invalid pattern. Please try again.")
         elif choice == '2':
             print("Credits: Paulo Costa")
         elif choice == '3':
