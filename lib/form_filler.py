@@ -198,4 +198,4 @@ class FormFiller:
                 alert = Alert(self.driver)
                 alert.accept()
 
-        self.driver.quit()
+        
