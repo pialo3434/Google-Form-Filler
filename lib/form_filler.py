@@ -169,7 +169,6 @@ class FormFiller:
                 submit_button = self.driver.find_element(By.CSS_SELECTOR, 'div[jsname="M2UYVd"]')
                 
                 submit_button.click()
-                time.sleep(5)
 
                 # Check if the form was submitted successfully
                 success_message = self.driver.find_element(By.CSS_SELECTOR, 'div.vHW8K')
