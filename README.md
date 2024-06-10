@@ -38,6 +38,25 @@ python main.py
 ## How to Use
 After setting up the project, you can run the `main.py` script. The script will prompt you to choose a pattern and, if necessary, enter your nationality and political party preference. Follow the on-screen instructions to proceed with the form filling.
 
+## WebDriver Setup
+
+For this project to interact with the Microsoft Edge browser, you need to download the appropriate version of the Edge WebDriver. Here's how you can set it up:
+
+1. **Check Your Browser Version**
+   First, check the version of Microsoft Edge you are using by navigating to `edge://settings/help` in your browser.
+
+2. **Download Edge WebDriver**
+   Go to the Microsoft Edge Driver page and download the WebDriver version that matches your Edge browser version.
+
+3. **Add WebDriver to Path**
+   After downloading, extract the contents of the ZIP file and place the `msedgedriver.exe` in a known directory. You will need to add this directory to your system's PATH environment variable, or specify the path directly in the `config.json` file.
+
+4. **Update Config File**
+   Update the `driver_path` in the `config.json` file with the full path to the `msedgedriver.exe` file.
+
+By following these steps, you'll ensure that the Selenium WebDriver can control Microsoft Edge to automate your form filling tasks.
+
+
 ## Downloading the Repository via HTTP
 If you prefer to download the repository without using Git, you can do so by navigating to the repository's page on GitHub and clicking the 'Download ZIP' button. Once downloaded, extract the contents and follow the setup instructions above.
 
