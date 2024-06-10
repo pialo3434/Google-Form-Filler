@@ -14,7 +14,7 @@ To set up the form filler on your local machine, follow these steps:
 1. **Clone the Repository**
 
 ```shell
-git clone https://github.com/pialo3434/Google-Form-Filler/tree/main
+git clone https://github.com/pialo3434/Google-Form-Filler.git
 ```
 
 2. **Install Dependencies**
