@@ -5,7 +5,7 @@ import time
 
 def main():
     valid_parties = ['PS', 'BLOCO', 'PAN', 'PCP-PEV']
-    valid_nationalities = ['PORTUGUESA', 'BRASILEIRA', 'AMERICANA', 'UCRANIANA', 'RUSSA', 'ANGOLANA', 'MOÇAMBICANA', 'CABO VERDIANA', 'OUTRO']
+    valid_nationalities = ['Portuguesa', 'Brasileira', 'Americana', 'Ucraniana', 'Russa', 'Angolana', 'Moçambicana', 'Cabo Verdiana', 'Outro']
     while True:
         print("\n1. Start")
         print("2. Credits")
@@ -19,10 +19,13 @@ def main():
                 delay = int(input("Enter the delay in seconds between each run: "))
                 nationality = None
                 if pattern in ['B', 'C']:
-                    nationality = input("Enter your nationality from the list: Portuguesa, Brasileira, Americana, Ucraniana, Russa, Angolana, Moçambicana, Cabo Verdiana, Outro: ").upper()
-                    while nationality not in valid_nationalities:
+                    nationality_input = input("Enter your nationality from the list: Portuguesa, Brasileira, Americana, Ucraniana, Russa, Angolana, Moçambicana, Cabo Verdiana, Outro: ")
+                    # Convert both user input and list items to uppercase for comparison
+                    while nationality_input.upper() not in [n.upper() for n in valid_nationalities]:
                         print("Invalid nationality. Please choose from the following list: Portuguesa, Brasileira, Americana, Ucraniana, Russa, Angolana, Moçambicana, Cabo Verdiana, Outro")
-                        nationality = input("Enter your nationality: ").upper()
+                        nationality_input = input("Enter your nationality: ")
+                    # Assign the original case input to nationality
+                    nationality = nationality_input
                     if pattern == 'B':
                         party = input("Enter the party you want to vote for (PS, BLOCO, PAN, PCP-PEV): ").upper()
                         while party not in valid_parties:
@@ -34,7 +37,7 @@ def main():
                     logger = setup_logger()
                     form_filler = FormFiller(config, logger)
                     if pattern in ['B', 'C']:
-                        form_filler.fill_form(pattern, party, nationality)  # Pass the party and nationality to the fill_form method
+                        form_filler.fill_form(pattern, party, nationality)  # Pass the original case nationality to the fill_form method
                     else:
                         form_filler.fill_form(pattern)
                     form_filler.driver.quit()  # Ensure the driver is quit after each run

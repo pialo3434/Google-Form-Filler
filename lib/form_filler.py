@@ -31,112 +31,124 @@ class FormFiller:
             print("Invalid pattern. Please try again.")
 
 
-
-
-
-
-
-
-
-
     def fill_form_b(self, party, nationality):
-        self.driver.get(self.config['form_url'])
-        page_counter = 1  # Initialize page counter
+            #checking if values are correct
+            print(party, nationality)
+            
+            self.driver.get(self.config['form_url'])
+            page_counter = 1  # Initialize page counter
 
-        # Define leader classification based on political preference
-        right_leaders = ['Donald Trump', 'Luís Montenegro', 'Nuno Melo', 'Rui Rocha', 'André Ventura']
-        left_leaders = ['Joe Biden', 'Paulo Raimundo', 'Mariana Mortágua', 'Inês Sousa Real', 'Pedro Nuno Santos', 'Rui Tavares']
+            # Define leader classification based on political preference
+            right_leaders = ['Donald Trump', 'Luís Montenegro', 'Nuno Melo', 'Rui Rocha', 'André Ventura']
+            left_leaders = ['Joe Biden', 'Paulo Raimundo', 'Mariana Mortágua', 'Inês Sousa Real', 'Pedro Nuno Santos', 'Rui Tavares']
 
-        while True:
-            # Wait for the questions on the current page to load
-            WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, 'div[jsmodel="CP1oW"]'))
-            )
+            options_q2 = [
+            'Portuguesa', 'Brasileira', 'Americana', 'Ucraniana', 'Russa',
+            'Angolana', 'Moçambicana', 'Cabo Verdiana', 'Outro'
+           ]
+            options_q5 = [
+                'PS', 'AD = PSD+CDS', 'PAN', 'Iniciativa Liberal', 'Bloco Esquerda',
+                'Chega', 'Livre', 'ADN', 'PCP-PEV', 'Outros'
+            ]
 
-            # Get all the questions on the current page
-            questions = self.driver.find_elements(By.CSS_SELECTOR, 'div[jsmodel="CP1oW"]')
+            while True:
+                # Wait for the questions on the current page to load
+                WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, 'div[jsmodel="CP1oW"]'))
+                )
 
-            for question in questions:
-                # Check if the question has radio groups
-                radiogroups = question.find_elements(By.CSS_SELECTOR, 'div[role="radiogroup"]')
-                for radiogroup in radiogroups:
-                    # Find all radio buttons in the current radiogroup
-                    radio_buttons = radiogroup.find_elements(By.CSS_SELECTOR, 'div.Od2TWd')
-                    if radio_buttons:
-                        # Initialize leader_name as "Unknown Leader" before the if conditions
-                        leader_name = "Unknown Leader"
-                        # Section 5: Determine the leader's political preference
-                        if page_counter == 5:
-                            leader_name_element = radiogroup.find_element(By.CSS_SELECTOR, 'div.OIC90c')
-                            leader_name = leader_name_element.text if leader_name_element else leader_name
-                            if leader_name in right_leaders:
-                                # Right leaders: Choose from options 1 to 4
+                # Get all the questions on the current page
+                questions = self.driver.find_elements(By.CSS_SELECTOR, 'div[jsmodel="CP1oW"]')
+
+                for question in questions:
+                    # Check if the question has radio groups
+                    radiogroups = question.find_elements(By.CSS_SELECTOR, 'div[role="radiogroup"]')
+                    for radiogroup in radiogroups:
+                        # Find all radio buttons in the current radiogroup
+                        radio_buttons = radiogroup.find_elements(By.CSS_SELECTOR, 'div.Od2TWd')
+                        if radio_buttons:
+                            # Initialize leader_name as "Unknown Leader" before the if conditions
+                            leader_name = "Unknown Leader"
+                            # Section 5: Determine the leader's political preference
+                            if page_counter == 5:
+                                leader_name_element = radiogroup.find_element(By.CSS_SELECTOR, 'div.OIC90c')
+
+                                leader_name = leader_name_element.text if leader_name_element else leader_name
+                                
+                                if leader_name in right_leaders:
+                                    # Right leaders: Choose from options 1 to 4
+                                    selected_option = random.choice(radio_buttons[:4])
+                                elif leader_name in left_leaders:
+                                    # Left leaders: Choose from options 5 to 7
+                                    selected_option = random.choice(radio_buttons[4:7])
+                                else:
+                                    # Default case if leader is not listed
+                                    selected_option = random.choice(radio_buttons)
+                            elif page_counter == 1:
+                                # Section 1: Choose from options 1 to 3
+                                selected_option = random.choice(radio_buttons[:3])
+                            else:
+                                # Sections 2, 3, 4: Choose from options 1 to 4
                                 selected_option = random.choice(radio_buttons[:4])
-                            elif leader_name in left_leaders:
-                                # Left leaders: Choose from options 5 to 7
-                                selected_option = random.choice(radio_buttons[4:7])
+                            selected_option.click()
+                            self.logger.info(f'Page {page_counter}, Leader: {leader_name}, Selected Option: {selected_option.get_attribute("aria-label")}')
+
+                # Check if the "Next" button is present to move to the next page
+                try:
+                    next_button = self.driver.find_element(By.CSS_SELECTOR, 'div[jsname="OCpkoe"]')
+                    next_button.click()
+                    page_counter += 1  # Increment page counter
+
+                    # Page 6: Select specific radio buttons based on the order
+                    if page_counter == 6:
+                        # Re-locate the questions on page 6 to avoid stale elements
+                        questions = self.driver.find_elements(By.CSS_SELECTOR, 'div[jsmodel="CP1oW"]')
+                        question_counter = 0  # Initialize a counter to keep track of the question number
+                        for question in questions:
+                            question_counter += 1  # Increment the question counter
+                            question_text_element = question.find_element(By.CSS_SELECTOR, 'span.M7eMe')
+                            question_text = question_text_element.text if question_text_element else "No question text found"
+                           
+
+                            # Find the radiogroup within the current question
+                            radiogroup = question.find_element(By.CSS_SELECTOR, 'div[role="radiogroup"]')
+                            # Find all radio buttons within the current radiogroup
+                            radio_buttons = radiogroup.find_elements(By.CSS_SELECTOR, 'div.Od2TWd')
+
+                            # Determine which radio button to select based on the question number
+                            if question_counter == 2:
+                                # Find the index of the nationality option that matches the parameter
+                                option_index = options_q2.index(nationality)
+                                # Select the radio button that matches the index
+                                radio_buttons[option_index].click()
+                            elif question_counter == 5:
+                                # Find the index of the party option that matches the parameter
+                                option_index = options_q5.index(party)
+                                # Select the radio button that matches the index
+                                radio_buttons[option_index].click()
                             else:
-                                # Default case if leader is not listed
+                                # For all other questions, select a random radio button
                                 selected_option = random.choice(radio_buttons)
-                        elif page_counter == 1:
-                            # Section 1: Choose from options 1 to 3
-                            selected_option = random.choice(radio_buttons[:3])
-                        else:
-                            # Sections 2, 3, 4: Choose from options 1 to 4
-                            selected_option = random.choice(radio_buttons[:4])
-                        selected_option.click()
-                        self.logger.info(f'Page {page_counter}, Leader: {leader_name}, Selected Option: {selected_option.get_attribute("aria-label")}')
+                                selected_option.click()
 
-                        # Section 6: Specific handling for nationality and party
-                        if page_counter == 6:
-                            # Handle the second question for nationality
-                            if question == questions[1]:  # Assuming the second question is at index 1
-                                for button in radio_buttons:
-                                    nationality_text_element = button.find_element(By.CSS_SELECTOR, 'div.OIC90c')
-                                    nationality_text = nationality_text_element.text if nationality_text_element else ""
-                                    if nationality_text.upper() == nationality.upper():
-                                        button.click()
-                                        break
-                            # Handle the last question for party
-                            elif question == questions[-1]:  # Assuming the last question is at the last index
-                                for button in radio_buttons:
-                                    party_text_element = button.find_element(By.CSS_SELECTOR, 'div.OIC90c')
-                                    party_text = party_text_element.text if party_text_element else ""
-                                    if party_text.upper() == party.upper():
-                                        button.click()
-                                        break
-                            else:
-                                # For other questions in section 6, choose randomly
-                                random.choice(radio_buttons).click()
+                        # Wait for 8 seconds before submitting the form
+                        time.sleep(3)
 
-            # Check if the "Next" button is present to move to the next page
-            try:
-                if page_counter == 6:
-                    time.sleep(30)
-                next_button = self.driver.find_element(By.CSS_SELECTOR, 'div[jsname="OCpkoe"]')
-                next_button.click()
-                page_counter += 1  # Increment page counter
-                if page_counter > 6:  # Stop after filling out section 5
-                    break
-            except NoSuchElementException:
-                # No more pages to navigate, break the loop
-                break
-            except UnexpectedAlertPresentException:
-                # Handle the unexpected alert
-                alert = Alert(self.driver)
-                alert.accept()
+                        # Locate all buttons with the role 'button'
+                        buttons = self.driver.find_elements(By.CSS_SELECTOR, 'div[role="button"]')
 
-        self.driver.quit()
+                        # Click the second button, assuming the first is for going back and the second is to submit
+                        if len(buttons) > 1:
+                            submit_button = buttons[1]  # The second button
+                            submit_button.click()
+                            time.sleep(1)  # Wait for 1 second after clicking
 
+                        break  # Exit after processing page 6
 
-
-
-
-
-
-
-
-
+                except UnexpectedAlertPresentException:
+                    # Handle any unexpected alerts
+                    alert = Alert(self.driver)
+                    alert.accept()
 
 
     def fill_form_randomly(self):
