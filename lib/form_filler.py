@@ -132,7 +132,7 @@ class FormFiller:
                                 selected_option.click()
 
                         # Wait for 8 seconds before submitting the form
-                        time.sleep(3)
+                        time.sleep(1)
 
                         # Locate all buttons with the role 'button'
                         buttons = self.driver.find_elements(By.CSS_SELECTOR, 'div[role="button"]')
