@@ -13,7 +13,7 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            pattern = input("Enter the pattern (A, B, C): ").upper()
+            pattern = input("Enter the pattern (A - Random, B - PS, C - CHEGA): ").upper()
             if pattern in ['A', 'B', 'C']:
                 times = int(input(f"How many times do you want to run pattern {pattern}? "))
                 delay = int(input("Enter the delay in seconds between each run: "))
