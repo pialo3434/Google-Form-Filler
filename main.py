@@ -4,8 +4,10 @@ from lib.logger_setup import setup_logger
 import time
 
 def main():
-    valid_parties = ['PS', 'BLOCO', 'PAN', 'PCP-PEV']
+    valid_parties = ['PS', 'BLOCO', 'PAN', 'PCP-PEV', 'Chega']
     valid_nationalities = ['Portuguesa', 'Brasileira', 'Americana', 'Ucraniana', 'Russa', 'Angolana', 'Moçambicana', 'Cabo Verdiana', 'Outro']
+    academic_backgrounds = ['Sem escolaridade', 'Básico (até 11º completo)', 'Secundário (12º completo)', 'Ensino Superior completo']
+    
     while True:
         print("\n1. Start")
         print("2. Credits")
@@ -13,31 +15,49 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            pattern = input("Enter the pattern (A - Random, B - PS, C - CHEGA): ").upper()
+            pattern = input("Enter the pattern (A - Random, B - PS, C - Chega): ").upper()
             if pattern in ['A', 'B', 'C']:
                 times = int(input(f"How many times do you want to run pattern {pattern}? "))
                 delay = int(input("Enter the delay in seconds between each run: "))
                 nationality = None
+                party = None
+                academic_background = None
+                
                 if pattern in ['B', 'C']:
-                    nationality_input = input("Enter your nationality from the list: Portuguesa, Brasileira, Americana, Ucraniana, Russa, Angolana, Moçambicana, Cabo Verdiana, Outro: ")
-                    # Convert both user input and list items to uppercase for comparison
-                    while nationality_input.upper() not in [n.upper() for n in valid_nationalities]:
-                        print("Invalid nationality. Please choose from the following list: Portuguesa, Brasileira, Americana, Ucraniana, Russa, Angolana, Moçambicana, Cabo Verdiana, Outro")
-                        nationality_input = input("Enter your nationality: ")
-                    # Assign the original case input to nationality
-                    nationality = nationality_input
-                    if pattern == 'B':
-                        party = input("Enter the party you want to vote for (PS, BLOCO, PAN, PCP-PEV): ").upper()
-                        while party not in valid_parties:
-                            print("Invalid party. Please choose from the following list: PS, BLOCO, PAN, PCP-PEV")
-                            party = input("Enter the party you want to vote for: ").upper()
+                    print("Select your nationality:")
+                    for i, option in enumerate(valid_nationalities, 1):
+                        print(f"{i}. {option}")
+                    nationality_choice = int(input("Enter the number corresponding to your nationality: "))
+                    while nationality_choice < 1 or nationality_choice > len(valid_nationalities):
+                        print("Invalid choice. Please select a number between 1 and " + str(len(valid_nationalities)))
+                        nationality_choice = int(input("Enter the number corresponding to your nationality: "))
+                    nationality = valid_nationalities[nationality_choice - 1]
+                    
+                    print("Select the party you want to vote for:")
+                    for i, option in enumerate(valid_parties, 1):
+                        print(f"{i}. {option}")
+                    party_choice = int(input("Enter the number corresponding to the party: "))
+                    while party_choice < 1 or party_choice > len(valid_parties):
+                        print("Invalid choice. Please select a number between 1 and " + str(len(valid_parties)))
+                        party_choice = int(input("Enter the number corresponding to the party: "))
+                    party = valid_parties[party_choice - 1]
+                    
+                    print("Select your academic background:")
+                    for i, option in enumerate(academic_backgrounds, 1):
+                        print(f"{i}. {option}")
+                    academic_choice = int(input("Enter the number corresponding to your academic background: "))
+                    while academic_choice < 1 or academic_choice > len(academic_backgrounds):
+                        print("Invalid choice. Please select a number between 1 and " + str(len(academic_backgrounds)))
+                        academic_choice = int(input("Enter the number corresponding to your academic background: "))
+                    academic_background = academic_backgrounds[academic_choice - 1]
+                
                 for i in range(times):
                     print(f"Running pattern {pattern}: {i+1}/{times}")
                     config = load_config()
                     logger = setup_logger()
                     form_filler = FormFiller(config, logger)
                     if pattern in ['B', 'C']:
-                        form_filler.fill_form(pattern, party, nationality)  # Pass the original case nationality to the fill_form method
+                        form_filler.fill_form(pattern, party, nationality, academic_background)  # Pass the additional academic_background parameter
                     else:
                         form_filler.fill_form(pattern)
                     form_filler.driver.quit()  # Ensure the driver is quit after each run
