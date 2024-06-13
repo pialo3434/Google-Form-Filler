@@ -4,7 +4,7 @@ from lib.logger_setup import setup_logger
 import time
 
 def main():
-    valid_parties = ['PS', 'BLOCO', 'PAN', 'PCP-PEV', 'Chega']
+    valid_parties = ['PS', 'BLOCO', 'PAN', 'PCP-PEV', 'Chega', 'AD = PSD+CDS']  # Added 'AD = PSD+CDS'
     valid_nationalities = ['Portuguesa', 'Brasileira', 'Americana', 'Ucraniana', 'Russa', 'Angolana', 'Moçambicana', 'Cabo Verdiana', 'Outro']
     academic_backgrounds = ['Sem escolaridade', 'Básico (até 11º completo)', 'Secundário (12º completo)', 'Ensino Superior completo']
     
@@ -15,15 +15,15 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            pattern = input("Enter the pattern (A - Random, B - PS, C - Chega): ").upper()
-            if pattern in ['A', 'B', 'C']:
+            pattern = input("Enter the pattern (A - Random, B - PS, C - Chega, D - AD = PSD+CDS): ").upper()  # Updated prompt
+            if pattern in ['A', 'B', 'C', 'D']:  
                 times = int(input(f"How many times do you want to run pattern {pattern}? "))
                 delay = int(input("Enter the delay in seconds between each run: "))
                 nationality = None
                 party = None
                 academic_background = None
                 
-                if pattern in ['B', 'C']:
+                if pattern in ['B', 'C', 'D']:  
                     print("Select your nationality:")
                     for i, option in enumerate(valid_nationalities, 1):
                         print(f"{i}. {option}")
@@ -56,7 +56,7 @@ def main():
                     config = load_config()
                     logger = setup_logger()
                     form_filler = FormFiller(config, logger)
-                    if pattern in ['B', 'C']:
+                    if pattern in ['B', 'C', 'D']:  
                         form_filler.fill_form(pattern, party, nationality, academic_background)  # Pass the additional academic_background parameter
                     else:
                         form_filler.fill_form(pattern)
