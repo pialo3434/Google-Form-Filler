@@ -6,7 +6,8 @@ This project is a Python-based automated form filler using Selenium. It is desig
 ## Features
 - **Pattern A**: Fills out the form randomly without considering any specific criteria.
 - **Pattern B**: Fills out the form based on the user's nationality and political party preference. It uses a list of known leaders and their political leanings to make selections on certain pages of the form.
-- **Pattern C**: Currently under development. Intended for future features.
+- **Pattern C**: Similar to B.
+- **Pattern D**: Similar to C.
 
 ## Setup Instructions
 To set up the form filler on your local machine, follow these steps:
