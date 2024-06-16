@@ -7,5 +7,3 @@
 # Ignore any logs folder inside any logging_folder
 **/logging_folder/**/logs/
 
-# Ignore config.json
-config.json
